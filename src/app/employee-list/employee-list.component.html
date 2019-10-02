@@ -1,0 +1,27 @@
+<div class="container">
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Date of birth</th>
+                <th>Gender</th>
+                <th>Hire Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of employees">
+                <td>{{emp.employeeNumber}}</td>
+                <td>{{emp.firstName}}</td>
+                <td>{{emp.lastName}}</td>
+                <td>{{emp.birthDate}}</td>
+                <td>{{emp.gender}}</td>
+                <td>{{emp.hireDate}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="btn btn-primary" (click)="onPrevious($event)">Previous</button>
+    &nbsp;
+    <button class="btn btn-primary" (click)="onNext($event)">Next</button>
+</div>
